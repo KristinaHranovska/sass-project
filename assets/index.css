@@ -44,17 +44,14 @@
 *,
 *::before,
 *::after {
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* Fix mobile Safari increase font-size on landscape mode */
 html {
   -moz-text-size-adjust: none;
   -webkit-text-size-adjust: none;
-  -ms-text-size-adjust: none;
-      text-size-adjust: none;
+  text-size-adjust: none;
 }
 
 /* Reapply the pointer cursor for anchor tags */
@@ -96,31 +93,16 @@ textarea {
 /* minimum style to allow to style meter element */
 meter {
   -webkit-appearance: revert;
-  -moz-appearance: revert;
-       appearance: revert;
+  appearance: revert;
 }
 
 /* preformatted text - use only for this feature */
 :where(pre) {
   all: revert;
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* reset default text opacity of input placeholder */
-::-webkit-input-placeholder {
-  color: unset;
-}
-::-moz-placeholder {
-  color: unset;
-}
-:-ms-input-placeholder {
-  color: unset;
-}
-::-ms-input-placeholder {
-  color: unset;
-}
 ::placeholder {
   color: unset;
 }
@@ -150,9 +132,7 @@ display:revert; revert to element instead of attribute */
 /* Revert Modal native behavior */
 :where(dialog:modal) {
   all: revert;
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* Remove details summary webkit styles */
@@ -205,8 +185,7 @@ summary {
   border: 0;
   padding: 0;
   white-space: nowrap;
-  -webkit-clip-path: inset(100%);
-          clip-path: inset(100%);
+  clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
@@ -216,18 +195,11 @@ summary {
 }
 
 .header {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
   display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-     -moz-box-align: center;
-          align-items: center;
+  align-items: center;
   padding: 15px;
   background-color: #1c1c24;
-  -webkit-box-shadow: 0px 1px 0px 0px #292932 inset;
-          box-shadow: 0px 1px 0px 0px #292932 inset;
+  box-shadow: 0px 1px 0px 0px #292932 inset;
 }
 
 .main {
@@ -238,31 +210,17 @@ summary {
 }
 
 .btn {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -moz-inline-box;
   display: inline-flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-     -moz-box-align: center;
-          align-items: center;
+  align-items: center;
   gap: 4px;
   min-width: 32px;
   min-height: 32px;
   padding: 8px 12px;
   color: #fafafb;
   border-radius: 12px;
-  -webkit-transition-property: background-color, color, -webkit-box-shadow;
-  transition-property: background-color, color, -webkit-box-shadow;
-  -moz-transition-property: background-color, color, box-shadow;
   transition-property: background-color, color, box-shadow;
-  transition-property: background-color, color, box-shadow, -webkit-box-shadow;
-  -webkit-transition-duration: 300ms;
-     -moz-transition-duration: 300ms;
-          transition-duration: 300ms;
-  -webkit-transition-timing-function: ease;
-     -moz-transition-timing-function: ease;
-          transition-timing-function: ease;
+  transition-duration: 300ms;
+  transition-timing-function: ease;
   font: inherit;
   text-transform: none;
   background-color: transparent;
@@ -380,14 +338,8 @@ summary {
 }
 
 .logo {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
   display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-     -moz-box-align: center;
-          align-items: center;
+  align-items: center;
   gap: 8px;
   padding: 8px 20px;
   color: #f07f2e;
@@ -406,21 +358,11 @@ summary {
 }
 
 .menu-link {
-  -webkit-transition: 300ms ease;
-  -moz-transition: 300ms ease;
   transition: 300ms ease;
-  -webkit-transition-property: color;
-  -moz-transition-property: color;
   transition-property: color;
   position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
   display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-     -moz-box-align: center;
-          align-items: center;
+  align-items: center;
   gap: 24px;
   padding: 16px 20px;
 }
@@ -435,10 +377,7 @@ summary {
   position: absolute;
   top: 50%;
   left: 0;
-  -webkit-transform: translateY(-50%);
-     -moz-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
   display: block;
   width: 4px;
   height: 32px;
@@ -455,8 +394,7 @@ summary {
 }
 
 .notification {
-  -webkit-flex-shrink: 0;
-          flex-shrink: 0;
+  flex-shrink: 0;
   display: block;
   min-width: 28px;
   height: 20px;
@@ -471,14 +409,8 @@ summary {
 }
 
 .menu-btn {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -moz-inline-box;
   display: inline-flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-     -moz-box-align: center;
-          align-items: center;
+  align-items: center;
   gap: 10px;
   margin-right: auto;
   color: #fafafb;
@@ -487,32 +419,18 @@ summary {
   fill: currentColor;
 }
 .sidebar .menu-btn {
-  -webkit-transition: 600ms ease;
-  -moz-transition: 600ms ease;
   transition: 600ms ease;
-  -webkit-transition-property: opacity, -webkit-transform;
-  transition-property: opacity, -webkit-transform;
-  -moz-transition-property: opacity, transform, -moz-transform;
   transition-property: opacity, transform;
-  transition-property: opacity, transform, -webkit-transform, -moz-transform;
-  -webkit-transition-delay: 800ms, 600ms;
-     -moz-transition-delay: 800ms, 600ms;
-          transition-delay: 800ms, 600ms;
+  transition-delay: 800ms, 600ms;
   position: absolute;
   top: 16px;
   right: -36px;
   opacity: 0;
-  -webkit-transform: rotate(180deg);
-     -moz-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
-          transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 .sidebar.is-open .menu-btn {
   opacity: 1;
-  -webkit-transform: rotate(0deg);
-     -moz-transform: rotate(0deg);
-      -ms-transform: rotate(0deg);
-          transform: rotate(0deg);
+  transform: rotate(0deg);
 }
 @media only screen and (min-width: 768px) {
   .main {
@@ -535,10 +453,7 @@ summary {
   .header {
     grid-area: header;
     padding: 24px 36px;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-       -moz-box-pack: justify;
-            justify-content: space-between;
+    justify-content: space-between;
   }
   .main {
     grid-area: main;
@@ -571,35 +486,20 @@ summary {
     visibility: visible;
   }
   .menu {
-    -webkit-transition: 300ms ease;
-    -moz-transition: 300ms ease;
     transition: 300ms ease;
-    -webkit-transition-property: -webkit-transform;
-    transition-property: -webkit-transform;
-    -moz-transition-property: transform, -moz-transform;
     transition-property: transform;
-    transition-property: transform, -webkit-transform, -moz-transform;
     max-width: 248px;
-    -webkit-transform: translateX(-100%);
-       -moz-transform: translateX(-100%);
-        -ms-transform: translateX(-100%);
-            transform: translateX(-100%);
+    transform: translateX(-100%);
   }
   .sidebar.is-open .menu {
-    -webkit-transform: translateX(0);
-       -moz-transform: translateX(0);
-        -ms-transform: translateX(0);
-            transform: translateX(0);
-    -webkit-transition-delay: 300ms;
-       -moz-transition-delay: 300ms;
-            transition-delay: 300ms;
+    transform: translateX(0);
+    transition-delay: 300ms;
   }
 }
 @media (hover: hover) {
   .btn--primary:hover, .btn--primary:focus {
     background-color: #f15c27;
-    -webkit-box-shadow: 0px 4px 10px 0px rgba(240, 127, 46, 0.25);
-            box-shadow: 0px 4px 10px 0px rgba(240, 127, 46, 0.25);
+    box-shadow: 0px 4px 10px 0px rgba(240, 127, 46, 0.25);
   }
   .btn--secondary:hover, .btn--secondary:focus {
     color: #f15c27;
