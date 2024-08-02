@@ -8,13 +8,13 @@
   @if map.has-key(var.$breakpoints, $bp) {
     $width: map.get(var.$breakpoints, $bp);
 
-    @if $type ==max {
+    @if $type == max {
       $width: $width - 0.02px;
     }
 
     @media only screen and (#{$type}-width: $width) {
       @if $is-retina {
-        @media (min-divice-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
           @content;
         }
       } @else {
@@ -45,6 +45,7 @@
   &::-webkit-scrollbar {
     width: 14px;
   }
+
   &::-webkit-scrollbar-track {
     background-color: transparent;
     border-radius: 100px;
@@ -54,7 +55,7 @@
     }
   }
 
-  &::-webkit-slider-thumb {
+  &::-webkit-scrollbar-thumb {
     background-color: fn.get-color("light-secondary");
     background-clip: content-box;
     border: 5px solid transparent;
@@ -67,7 +68,7 @@
 }
 
 @mixin ease($ease, $properties...) {
-  @if map.has-key(var$easings, $ease) {
+  @if map.has-key(var.$easings, $ease) {
     $ease: map.get(var.$easings, $ease);
 
     transition: $ease;
