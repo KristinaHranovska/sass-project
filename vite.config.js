@@ -21,13 +21,11 @@ export default defineConfig({
       },
     }),
     {
-      name: 'imagemin-webp',
-      async closeBundle() {
-        await imagemin(["./src/img/**/*.{jpg,png,jpeg}"], {
-          destination: "./src/img/webp/",
-          plugins: [imageminWebp({ quality: 86 })],
-        });
-      },
+      ...imagemin(["./src/img/**/*.{jpg,png,jpeg}"], {
+        destination: "./src/img/webp/",
+        plugins: [imageminWebp({ quality: 86 })],
+      }),
+      apply: "serve",
     },
     purgecss({
       content: ["./**/*.html"],
@@ -41,7 +39,7 @@ export default defineConfig({
           .sync(["./*.html", "./pages/**/*.html"])
           .map((file) => [
             path.relative(
-              path.resolve(__dirname),
+              __dirname,
               file.slice(0, file.length - path.extname(file).length)
             ),
             fileURLToPath(new URL(file, import.meta.url)),

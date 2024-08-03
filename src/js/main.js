@@ -1,5 +1,5 @@
 // Commect styles
-import '../scss/main.scss';
+import '../scss/style.scss';
 
 // import * as bodyScrollLock from 'body-scroll-lock';
 
