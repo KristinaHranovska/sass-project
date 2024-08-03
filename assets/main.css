@@ -1137,7 +1137,7 @@ summary {
   }
   .main {
     grid-area: main;
-    grid-template-columns: repeat(auto-fit, minmax(455px, 629px));
+    grid-template-columns: repeat(2, 1fr);
     grid-template-areas: "welcome welcome" "co-workers tasks" "co-workers reports";
   }
   .page-title-accent {
