@@ -39,7 +39,7 @@
     fetch(link.href, fetchOpts);
   }
 })();
-const main = "";
+const style = "";
 const refsMenu = {
   openMenuBtn: document.querySelector(".js-menu-open"),
   closeMenuBtn: document.querySelector(".js-menu-close"),
