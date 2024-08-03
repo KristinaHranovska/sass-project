@@ -16,6 +16,11 @@
     align-items: flex-end;
     row-gap: 16px;
 }
+
+.welcome-companies {
+    grid-area: welcomeco;
+}
+
 .page-title {
     &-accent {
         @extend %section-title;

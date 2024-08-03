@@ -34,3 +34,20 @@
             "co-workers reports";
     }
 }
+
+.main-companies {
+    display: grid;
+    gap: 40px;
+    padding: 16px;
+
+    grid-template-areas:
+        "welcomeco"
+        "companies";
+
+    @include mx.mq("md") {
+        gap: 36px;
+        padding: 36px;
+
+        grid-template-rows: 68px 1fr;
+    }
+}

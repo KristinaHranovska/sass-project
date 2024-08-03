@@ -1,0 +1,66 @@
+@use "../utils/placeholders";
+@use "../utils/variables" as var;
+@use "../utils/functions" as fn;
+@use "../utils/mixins" as mx;
+
+.companies {
+    grid-area: companies;
+}
+
+.companies-list {
+    display: grid;
+    gap: 20px;
+
+    @include mx.mq("md") {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @include mx.mq("lg") {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.companies-item {
+    background-color: fn.get-color("dark-tertiary");
+    border-radius: 24px;
+
+    padding: 24px;
+}
+
+.companies-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.title-company {
+    @extend %accent-text;
+
+    color: fn.get-color("light");
+}
+
+.companies-geo-icon {
+    fill: fn.get-color("success");
+}
+
+.companies-block-location {
+    display: flex;
+    gap: 8px;
+
+    margin-bottom: 34px;
+}
+
+.companies-location {
+    @extend %main-text;
+
+    color: fn.get-color("light-secondary");
+}
+
+.companies-icon-fill {
+    fill: fn.get-color("light");
+    stroke: transparent;
+}
+
+.companies-icon-stroke {
+    fill: transparent;
+    stroke: fn.get-color("light");
+}
